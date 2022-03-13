@@ -1,0 +1,19 @@
+baseURL = 'http://yukitsune.dev/'
+languageCode = 'en-au'
+title = 'My New Hugo Site'
+theme = 'terminal'
+paginate = 5
+enableGitInfo = true
+
+[params]
+    themeColor = "pink"
+    showMenuItems = 3
+    centerTheme = true
+    showLastUpdated = true
+
+[params.twitter]
+    # set Twitter handles for Twitter cards
+    # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+    # do not include @
+    creator = "YuKitsune256"
+    site = "https://yukitsune.dev"
