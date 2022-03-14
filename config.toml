@@ -1,4 +1,4 @@
-baseURL = 'http://yukitsune.dev/'
+baseURL = '/'
 languageCode = 'en-au'
 title = 'My New Hugo Site'
 theme = 'terminal'
