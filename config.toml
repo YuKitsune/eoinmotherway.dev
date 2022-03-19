@@ -1,6 +1,6 @@
 baseURL = 'https://yukitsune.dev/'
 languageCode = 'en-au'
-title = 'My New Hugo Site'
+title = 'YuKitsune.dev'
 theme = 'terminal'
 paginate = 5
 enableGitInfo = true
