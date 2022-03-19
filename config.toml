@@ -25,7 +25,7 @@ enableRobotsTXT = true
     [languages.en]
         languageName = "English"
         title = "YuKitsune"
-        subtitle = "A simple, retro theme for Hugo"
+        subtitle = "Making computers go beep and boop"
         owner = ""
         keywords = ""
         copyright = ""
