@@ -21,6 +21,7 @@ jobs:
       run: |
         docker build \
           --file Dockerfile \
+          --build-arg BASE_URL="https://yukitsune.dev/" \
           --tag ${{ env.IMAGE_NAME }} \
           .
 
