@@ -1,7 +1,7 @@
 +++
 title = "Welcome to my blog!"
 date = "2022-03-13"
-author = "YuKitsune"
+author = "Eoin Motherway"
 authorTwitter = "YuKitsune256" #do not include @
 +++
 

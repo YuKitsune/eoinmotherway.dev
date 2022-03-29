@@ -1,8 +1,6 @@
 +++
 title = "AccuMap - A popular map for the VATSIM network"
 date = "2022-03-13"
-author = "YuKitsune"
-authorTwitter = "YuKitsune256" #do not include @
 cover = "/images/accumap/cover.png"
 tags = ["map", "flight simulation", "vatsim"]
 keywords = ["accumap", "vatsim", "map"]

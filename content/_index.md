@@ -4,7 +4,7 @@ showLastUpdated = false
 readingTime = false
 +++
 
-I'm Eoin, aka YuKitsune. I'm Software Engineer at [Octopus Deploy](https://octopus.com).
+Hi!, I'm Eoin Motherway. I'm Software Engineer at [Octopus Deploy](https://octopus.com).
 
 I'm a big fan of DevOps, automation, software architecture, privacy, and security.
 
