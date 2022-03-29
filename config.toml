@@ -24,7 +24,7 @@ enableRobotsTXT = true
 [languages]
     [languages.en]
         languageName = "English"
-        title = "YuKitsune"
+        title = "Eoin Motherway"
         subtitle = "Making computers go beep and boop"
         owner = ""
         keywords = ""
@@ -38,7 +38,7 @@ enableRobotsTXT = true
         missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-        logoText = "YuKitsune"
+        logoText = "Eoin Motherway"
         logoHomeLink = "/"
 
     [languages.en.menu]
