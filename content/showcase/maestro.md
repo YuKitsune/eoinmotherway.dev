@@ -14,7 +14,7 @@ The idea came about after I decided to switch from one music streaming service t
 Maestro accepts share links from a number of different music streaming services.
 Once Maestro has received a link, it determines what streaming service the link belongs to (based on the domain name), then uses that streaming services REST API to query for the artist, album or track metadata.
 
-Once Maestro has the metadata, it then performs a search request using the remaining streaming services search APIs.
+Once Maestro has the metadata, it then performs a search request against the remaining streaming services search APIs.
 Once Maestro has results from all streaming services, it groups them together, stores them in a database so that it can be retrieved later, and then presents the results to the user.
 
 All-in-all, not too complicated!
