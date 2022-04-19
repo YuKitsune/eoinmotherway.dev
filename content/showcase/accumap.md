@@ -9,18 +9,22 @@ draft = false
 
 In June 2017, myself along with a number of other flight simulation enthusiasts from the [VATSIM network](https://vatsim.net) came together to develop a new map which could accurately display all pilots and air traffic controllers connected to the network.
 
-Maps like this have existed for a long time, [VAT-Spy](https://vatspy.rosscarlson.dev) being the most popular map still in use today.
-These maps shared a common problem, which was their lack of support for accurately depicting the airspace owned by air traffic controllers.
+VATSIM is an online air traffic simulation network, connecting people from around the world flying online or acting as virtual Air Traffic Controllers.
+Air Traffic Control (ATC) is available in our communities throughout the world, operating as close as possible to the real-life procedures and utilising real-life weather, airport and route data. On VATSIM, users can join people on the other side of the planet to fly and control, with nothing more than a home computer.
 
-Most of these maps would highlight an entire FIR (Flight Information Region) when an air traffic controller within that area connected to the network. This can be quite inaccurate as FIRs are often split into multiple separate sectors. Air traffic controllers only controlling a subset of these sectors would then be shown as controlling a much larger area than they actually are.
+Similar to websites such as [Flightradar24](https://flightradar24.com), [FlightAware](https://flightaware.com) and [Plane Finder](https://planefinder.net), many map applications have been developed for the VATSIM network, not only showing where people are flying, but also where people can be found providing air traffic control services.
 
-For example, here are the two FIR in Australia:
-{{< image src="/images/accumap/firs.png" alt="Brisbane and Melbourne FIRs" position="center" >}}
+Maps like this have existed for a long time, [VAT-Spy](https://vatspy.rosscarlson.dev) being the most popular map still in use today, but these maps shared a common problem, which was their lack of support for accurately depicting the airspace owned by air traffic controllers.
 
-These massive FIRs are further split into smaller, more manageable sectors:
-{{< image src="/images/accumap/sectors.png" alt="Brisbane and Melbourne airspace sectors" position="center" >}}
+Most of these maps would highlight an entire FIR (Flight Information Region) when an air traffic controller within that area connected to the network. This can be quite inaccurate as FIRs are often split into multiple separate sectors. Air traffic controllers who are only controlling a subset of these sectors would instead be shown as controlling a much larger area than they actually were.
 
-Air traffic controllers on the VATSIM network often only control a small handful of these sectors at a time, and thus would often need to explain to pilots how most maps weren't showing their true airspace boundaries.
+For example, here is the London FIR:
+{{< image src="/images/accumap/fir.png" alt="London FIR" position="center" >}}
+
+This FIR is further split into smaller, more manageable sectors:
+{{< image src="/images/accumap/london_sectors.png" alt="London Airspace Sectors on the VATSIM network" position="center" >}}
+
+Air traffic controllers on the VATSIM network often only control one of these sectors at a time, and thus would often need to explain to pilots how most maps weren't showing their true airspace boundaries.
 This often resulted in vague explanations in an attempt to teach the pilot where their airspace begins and ends. For new pilots, this can be very confusing, and getting told that "you're not in my airspace" can sometimes be embarrassing.
 
 These older map programs often shipped with outdated data out of the box, which meant that users would have to manually install new data sets by downloading them from forums, navigating into the program files, and replacing a number of `.dat` files.
