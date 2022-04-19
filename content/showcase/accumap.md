@@ -196,7 +196,7 @@ At the end of the day, AccuMap started as a _"wouldn't this be cool"_ project, w
 Rather than changing our mindset and focusing on it as a product that people use, we kept treating it as a sandbox where we could experiment, learn, and try out some new ideas.
 
 ## The positives
-
+<!-- Todo -->
 - We built a community
 - Thanks to AccuMap, I got my foot in the door into software development
   - I was offered my first .NET job shortly after showing off AccuMap at my first ever tech interview
