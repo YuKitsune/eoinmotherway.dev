@@ -6,6 +6,10 @@ paginate = 5
 enableGitInfo = true
 enableRobotsTXT = true
 
+[privacy]
+  [privacy.youtube]
+    privacyEnhanced = true
+
 [params]
     themeColor = "pink"
     showMenuItems = 3

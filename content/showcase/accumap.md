@@ -196,11 +196,11 @@ At the end of the day, AccuMap started as a _"wouldn't this be cool"_ project, w
 Rather than changing our mindset and focusing on it as a product that people use, we kept treating it as a sandbox where we could experiment, learn, and try out some new ideas.
 
 ## The positives
-<!-- Todo -->
-- We built a community
-- Thanks to AccuMap, I got my foot in the door into software development
-  - I was offered my first .NET job shortly after showing off AccuMap at my first ever tech interview
-  - Other AccuMap devs have also gotten their jobs thanks to AccuMap
+
+Despite all of the issues we faced during AccuMaps lifetime, it wasn't all negatives.
+
+Thanks to AccuMap, we built a tight-knit community of like-minded people with a passion for airspace and technology, which is still active today!
+AccuMap also played a key role in advancing our career as developers. We learned a ton of things from the project, including plenty of _"what not to do"_'s. Some of us also used it on our resumes, which was very beneficial when searching for some of our first jobs in software.
 
 ## The future of AccuMap
 
