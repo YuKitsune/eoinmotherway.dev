@@ -9,7 +9,7 @@ draft = false
 
 ## What was AccuMap?
 
-AccuMap was a relatively popular live map of the [VATSIM network](https://vatsim.net), renowned for it's accurate depiction of air traffic control (ATC) sectors and modern user interface.
+AccuMap was a relatively popular live map of the [VATSIM network](https://vatsim.net), renowned for it's accurate depiction of air traffic control (ATC) sectors, and modern user interface.
 Myself, along with a number of other VATSIM members threw it together in mid 2017 as a _"wouldn't this be cool"_ project, which eventually gained the attention of the broader VATSIM community.
 This lead us to release the map as a desktop application which later evolved into a web based application.
 
@@ -18,18 +18,18 @@ If you're interested to learn about AccuMap's story from it's conception to it's
 ## What is VATSIM?
 
 VATSIM is an online air traffic simulation network, connecting people from around the world flying online or acting as virtual air traffic controllers.
-Air traffic control is available in VATSIM's communities throughout the world, operating as close as possible to the real-life procedures and utilizing real-world weather, airport and route data.
+Air traffic control is available in VATSIM's communities throughout the world, operating as close as possible to the real-life procedures and utilizing real-world weather, airport, and route data.
 On VATSIM, users can join people on the other side of the planet to fly and control, with nothing more than a home computer.
 
 ### VATSIM Maps
 
 Similar to websites such as [Flightradar24](https://flightradar24.com), [FlightAware](https://flightaware.com) and [Plane Finder](https://planefinder.net), many map applications have been developed for the VATSIM network, not only showing where people are flying, but also where people can be found providing air traffic control services.
 
-VATSIM's most popular map, [VAT-Spy](https://vatspy.rosscarlson.dev) is recognized by the community as the de-facto map of VATSIM, as it's lightweight, easy to use, and generally does a good job at showing ATC. Aerodrome controllers such as delivery, ground, and tower are shown as `D`, `G` and `T` symbols respectively next to the airport markers, approach/departure controllers are shown as ~40nm (nautical mile) circles around an airport, and center/en-route controllers are shown by highlighting their [FIRs (Flight Information Regions)](https://en.wikipedia.org/wiki/Flight_information_region).
+VATSIM's most popular map, [VAT-Spy](https://vatspy.rosscarlson.dev) is recognized by the community as the de-facto map of VATSIM, as it's lightweight, easy to use, and generally does a good job at showing ATC. Aerodrome controllers such as delivery, ground, and tower are shown as `D`, `G`, and `T` symbols respectively next to the airport markers, approach/departure controllers are shown as ~40nm (nautical mile) circles around an airport, and center/en-route controllers are shown by highlighting their [FIRs (Flight Information Regions)](https://en.wikipedia.org/wiki/Flight_information_region).
 
 {{< image src="/images/accumap/vatspy.png" alt="Screenshot of VAT-Spy" >}}
 
-VAT-Spy, as well as most other VATSIM maps shared a common problem, which was their lack of support for accurately depicting the airspace owned by approach/departure and center/en-route air traffic controllers.
+VAT-Spy, as well as most other VATSIM maps shared a common problem, which was their lack of support for accurately depicting the airspace owned by approach/departure, and center/en-route air traffic controllers.
 
 ### The problem
 
@@ -38,7 +38,7 @@ As the above screenshot shows, these maps generally highlight an entire FIR when
 In most cases, these FIRs are split into multiple separate sectors, for example, here is the London FIR:
 {{< image src="/images/accumap/fir.png" alt="London FIR" position="center" >}}
 
-London's FIR is further split into smaller, more manageable sectors, such as _"North"_ (in red), _"West"_ (in green), _"Central"_ (in yellow) and _"South"_ (in blue).
+London's FIR is further split into smaller, more manageable sectors, such as _"North"_ (in red), _"West"_ (in green), _"Central"_ (in yellow), and _"South"_ (in blue).
 ATC also had the option to combine these sectors into _"South Central"_ (_"South"_ and _"Central"_ ) or _"Bandbox"_ (all sectors combined). Some of these sectors could also be split further, but let's not delve too deep into the weeds of UK airspace...
 
 {{< image src="/images/accumap/london_sectors.png" alt="London Airspace Sectors on the VATSIM network" position="center" >}}
@@ -49,7 +49,7 @@ Since the air traffic controllers on the VATSIM network often control one of the
 
 Air traffic controllers would often provide vague explanations of their airspace boundaries to pilots over direct messages. For new pilots, this can be very confusing, and being told that _"you're not in my airspace"_ can sometimes be embarrassing. As for ATC, it's distracting. Not only do they have to manage a complex and busy piece of airspace, but also educate new pilots on their FIRs specific sectors.
 
-Since these older maps weren't capable of depicting an FIRs sub-sectors, the community tried to address this by modifying the FIR boundary data for these programs to at least give a rough idea of where the sectors were. Some may argue this is _"good enough"_, but we thought it looked like shit, made the map harder to read and no longer accurately represented the true FIR boundaries.
+Since these older maps weren't capable of depicting an FIRs sub-sectors, the community tried to address this by modifying the FIR boundary data for these programs to at least give a rough idea of where the sectors were. Some may argue this is _"good enough"_, but we thought it didn't look good, made the map harder to read, and no longer accurately represented the true FIR boundaries.
 This band-aid solution is still in use today.
 
 {{< image src="/images/accumap/vatspy_bodge.png" alt="London Airspace Sectors roughly drawn on VAT-Spy" position="center" >}}
@@ -57,14 +57,14 @@ This band-aid solution is still in use today.
 These community made data files were typically distributed via the forums for each region, meaning a data file hosted on the Australian forum might only contain patches for Australia, but not Europe, vice versa.
 Without some technical knowledge of the file structure, these files couldn't be combined very easily, which caused a lot of fragmentation in the community.
 
-This fragmentation issue has somewhat been solved in more recent years now that VATSIM have an [official GitHub repo](https://github.com/vatsimnetwork/vatspy-data-project) for these files.
+This fragmentation issue has somewhat been solved in more recent years now that VATSIM has an [official GitHub repo](https://github.com/vatsimnetwork/vatspy-data-project) for these files.
 
 ## The beginning of AccuMap
 
 With the above issues in mind, we set out with a few main goals:
 
 1. Accurately display the airspace boundaries for air traffic controllers without making the map look like a mess
-2. Store the airspace boundaries in a centralized and publicly accessible source, maintained by the community
+2. Store the airspace boundaries in a centralized, and publicly accessible source, maintained by the community
 3. Build a somewhat modern user interface
 
 ### The desktop application
@@ -73,12 +73,12 @@ We decided to make AccuMap a desktop application, as it's something most VAT-Spy
 
 None of us had any experience in writing desktop applications at the time, only basic HTML, CSS, and JavaScript. With these skills in our toolbox, we decided to use [Electron](https://www.electronjs.org). (As I write this, I keep wondering why we didn't just make it a web app...)
 
-At the time, we weren't familiar with popular UI frameworks such as Angular and React, so we used the tools we were familiar with, and basically built our own UI framework without realizing it! (It wasn't great...)
+At the time, we weren't familiar with popular UI frameworks such as Angular, and React, so we used the tools we were familiar with, and basically built our own UI framework without realizing it! (It wasn't great...)
 
 {{< image src="/images/accumap/prototype.png" alt="AccuMap v1 prototype" >}}
 
 The first prototype was born after a day or two. It wasn't pretty, but it was a start.
-The pilot data was sourced from VATSIM's now deprecated WhazzUp feed, and the FIR data was sourced from... I actually don't remember... I think I found a [KML file](https://en.wikipedia.org/wiki/Keyhole_Markup_Language) somewhere online and stuck with it.
+The pilot data was sourced from VATSIM's now deprecated WhazzUp feed, and the FIR data was originally sourced from VAT-Spy, but modified slightly to better represent the real FIR boundaries.
 
 ### The data
 
@@ -133,7 +133,7 @@ Languages aside, we also wanted to add improve our airspace sector depiction cap
 
 {{< image src="/images/accumap/web.png" alt="AccuMap Web Application" >}}
 
-AccuMap v2 eventually released with a similar reception to v1 and addressed most of what it set out to do.
+AccuMap v2 eventually released with a similar reception to v1, and addressed most of what it set out to do.
 Another time-lapse shows how the experience is much smoother overall, but some issues, such as occasionally disappearing airspace sectors, still plagued the app.
 
 {{< youtube 62Lk9Pyivb8 >}}
@@ -179,16 +179,16 @@ To keep the costs down, we also took down the server which AccuMap v1 relied on 
 
 ### Renew your domain names
 
-If you've got a website that a lot of people visit, don't forget to renew the domain name. The original AccuMap domain name has since fallen into the hands of scammers, and with links to the original site floating around on forums and Discord messages, it doesn't paint a pretty picture.
+If you've got a website that a lot of people visit, don't forget to renew the domain name. The original AccuMap domain name has since fallen into the hands of scammers, and with links to the original site floating around on forums, and Discord messages, it doesn't paint a pretty picture.
 
 ### Bugs should have priority over features
 
 Despite the fact that AccuMap was riddled with issues, we still pushed forward with new features, and kept adding to a never ending pile of ideas.
-We should've addressed the bugs and performance issues before deciding to re-write and add new features.
+We should've addressed the bugs, and performance issues before deciding to re-write and add new features.
 
 ### Over-hype
 
-Before we even released v1, we spent a bit of time showing AccuMap off on social media, generating a bit of excitement from the community. A new map on the horizon with some pretty new features certainly generated the hype we were expecting, but once users started using it, it became clear to us that many users were disappointed with the amount of bugs and performance issues.
+Before we even released v1, we spent a bit of time showing AccuMap off on social media, generating a bit of excitement from the community. A new map on the horizon with some pretty new features certainly generated the hype we were expecting, but once users started using it, it became clear to us that many users were disappointed with the amount of bugs, and performance issues.
 
 ### We didn't really know what we were doing
 
@@ -199,7 +199,7 @@ Rather than changing our mindset and focusing on it as a product that people use
 
 Despite all of the issues we faced during AccuMaps lifetime, it wasn't all negatives.
 
-Thanks to AccuMap, we built a tight-knit community of like-minded people with a passion for airspace and technology, which is still active today!
+Thanks to AccuMap, we built a tight-knit community of like-minded people with a passion for airspace, and technology, which is still active today!
 AccuMap also played a key role in advancing our career as developers. We learned a ton of things from the project, including plenty of _"what not to do"_'s. Some of us also used it on our resumes, which was very beneficial when searching for some of our first jobs in software.
 
 ## The future of AccuMap
