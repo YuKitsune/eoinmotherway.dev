@@ -33,19 +33,18 @@ VAT-Spy, as well as most other VATSIM maps shared a common problem, which was th
 
 ### The problem
 
-As the above screenshot shows, these maps generally highlight an entire FIR when an air traffic controller within that area is connected to the network. This is not always the case on the VATSIM network.
+As the above screenshot shows, these maps typically highlight an entire FIR when an air traffic controller within that area is connected to the network. On the VATSIM network, this can sometimes lead to confusion, as these FIRs are typically split up into multiple different sub-sectors.
 
-In most cases, these FIRs are split into multiple separate sectors, for example, here is the London FIR:
 {{< image src="/images/accumap/fir.png" alt="London FIR" position="center" >}}
 
-London's FIR is further split into smaller, more manageable sectors, such as _"North"_ (in red), _"West"_ (in green), _"Central"_ (in yellow), and _"South"_ (in blue).
+The above image shows the London FIR. This FIR is further split into smaller, more manageable sectors, such as _"North"_ (in red), _"West"_ (in green), _"Central"_ (in yellow), and _"South"_ (in blue).
 ATC also had the option to combine these sectors into _"South Central"_ (_"South"_ and _"Central"_ ) or _"Bandbox"_ (all sectors combined). Some of these sectors could also be split further, but let's not delve too deep into the weeds of UK airspace...
 
 {{< image src="/images/accumap/london_sectors.png" alt="London Airspace Sectors on the VATSIM network" position="center" >}}
 
 These sectors also don't always remain inside of the FIR boundaries. In the above example, the _"North"_ sector leaves a gap north of it's border, and the northern border of the FIR, this is delegated to the Scottish FIR. There is also a bit of the _"West"_ sector surrounding Jersey, and the _"South"_ sector around Dover jutting out into French airspace.
 
-Since the air traffic controllers on the VATSIM network often control one of these sectors at a time, pilots were easily mislead by these outdated map programs into thinking that a controller was covering an entire FIR. This was often the case when a controller had connected to the _"West"_ sector, and pilots would try contacting them from Heathrow, which is well outside of their airspace.
+Since the air traffic controllers on the VATSIM network often control one of these sectors at a time, pilots were easily mislead by programs like VAT-Spy into thinking that a controller was covering an entire FIR. This was often the case when a controller had connected to the _"West"_ sector, and pilots would try contacting them from Heathrow, which is outside of their airspace.
 
 Air traffic controllers would often provide vague explanations of their airspace boundaries to pilots over direct messages. For new pilots, this can be very confusing, and being told that _"you're not in my airspace"_ can sometimes be embarrassing. As for ATC, it's distracting. Not only do they have to manage a complex and busy piece of airspace, but also educate new pilots on their FIRs specific sectors.
 
@@ -63,15 +62,14 @@ This fragmentation issue has somewhat been solved in more recent years now that 
 
 With the above issues in mind, we set out with a few main goals:
 
-1. Accurately display the airspace boundaries for air traffic controllers without making the map look like a mess
+1. Accurately display the airspace boundaries for connected air traffic controllers
 2. Store the airspace boundaries in a centralized, and publicly accessible source, maintained by the community
 3. Build a somewhat modern user interface
 
 ### The desktop application
 
-We decided to make AccuMap a desktop application, as it's something most VAT-Spy users were familiar with. That was it really, we didn't have any other reasons.
-
-None of us had any experience in writing desktop applications at the time, only basic HTML, CSS, and JavaScript. With these skills in our toolbox, we decided to use [Electron](https://www.electronjs.org). (As I write this, I keep wondering why we didn't just make it a web app...)
+We decided to make AccuMap a desktop application, as it's something most VAT-Spy users were familiar with.
+None of us had any experience in writing desktop applications at the time, only basic HTML, CSS, and JavaScript. With these skills in our toolbox, we decided to use [Electron](https://www.electronjs.org). (As I write this, I keep asking myself why we didn't just make it a web app...)
 
 At the time, we weren't familiar with popular UI frameworks such as Angular, and React, so we used the tools we were familiar with, and basically built our own UI framework without realizing it! (It wasn't great...)
 
@@ -83,7 +81,7 @@ The pilot data was sourced from VATSIM's now deprecated WhazzUp feed, and the FI
 ### The data
 
 With the application itself under development, it wouldn't be AccuMap without it's sectors.
-We started prototyping the sector depiction using KML files drawn by hand using Google Earth, and a text file describing the relationships between controllers and sectors.
+We started prototyping the sector depiction system using KML files drawn by hand using Google Earth, and a text file describing the relationships between controllers and sectors.
 This text file was the most important part of AccuMap, as it allowed for sector ownership hierarchies to be accurately depicted on the map.
 
 Creating all these files was tedious work. After slaving away for days drawing sectors ourselves, and not writing any code, we decided to ask the community for help. This truly paid off in spades, as we received **a lot** of expressions of interest.
@@ -105,7 +103,8 @@ For us, having our project showcased on a news site was a big deal, and a really
 
 {{< image src="https://c.tenor.com/vlHrAxHFvegAAAAd/here-it-comes-tornado.gif" >}}
 
-Not long after the release of the desktop application, it became clear that it was riddled with issues such as memory leaks, disappearing pilots and air traffic controllers, and a flakey auto-update system that never worked. We often had to tell our users to re-download the installer from our website to receive updates, which was embarrassing to say the least.
+Not long after the release of the desktop application, it became clear that it wasn't as stable as we originally thought it was.
+The program riddled with issues such as memory leaks, performance issues, disappearing pilots and air traffic controllers, and a flakey auto-update system that never worked. We often had to tell our users to re-download the installer from our website to receive updates, which was embarrassing to say the least.
 
 This time lapse shows some of the issues which plagued AccuMap. You can notice the aircraft icons sometimes disappear, the airspace sectors sometimes double up or disappear, and the overall experience isn't very smooth.
 
@@ -122,18 +121,18 @@ At this point, we were scared that we'd start losing users because of this, so w
 ## The web application
 
 In December 2017, we began thinking about what we wanted from AccuMap v2. One of the first decisions we made was to use a strongly typed language, as we were sick of using pure JavaScript.
-We knew we were doing a web application, so our options at the time were C# with ASP.NET MVC, or Java with Spring.
+We knew we were going to write a web application, so our options at the time were C# with ASP.NET MVC, or Java with Spring.
 
 We eventually decided on C# as it was strongly typed, and had some great features, tooling, and frameworks for building web applications.
-As for the frontend, we still didn't know about UI frameworks like React, so we _somehow_ decided to use [Dart](https://dart.dev). I think our reasoning at the time was that it could transpile to JavaScript, and didn't suck as much to write. **This was a horrible idea**.
+As for the frontend, we still didn't know about UI frameworks like React, so we _somehow_ decided to use [Dart](https://dart.dev). I think our reasoning at the time was that it could transpile to JavaScript, and was much nicer to write than JavaScript. **This was a horrible idea**.
 
-Languages aside, we also wanted to add improve our airspace sector depiction capabilities, make some quality of life improvements such as flight path trails, unique aircraft icons, and numerous other features and improvements.
+Languages aside, we also wanted to add improvements our airspace sector depiction capabilities, make some quality of life improvements such as flight path trails, unique aircraft icons, and numerous other features and improvements.
 
 ## Version 2
 
 {{< image src="/images/accumap/web.png" alt="AccuMap Web Application" >}}
 
-AccuMap v2 eventually released with a similar reception to v1, and addressed most of what it set out to do.
+AccuMap v2 eventually released with a similar reception to v1, and addressed most of what it had set out to do.
 Another time-lapse shows how the experience is much smoother overall, but some issues, such as occasionally disappearing airspace sectors, still plagued the app.
 
 {{< youtube 62Lk9Pyivb8 >}}
@@ -142,27 +141,27 @@ Another time-lapse shows how the experience is much smoother overall, but some i
 
 ### Dart was a horrible choice
 
-First, let's address the elephant in the room. What the hell is Dart?
+First, let's address the elephant in the room. What the heck is Dart?
 Dart is a java-like programming language primarily used for [Flutter](https://flutter.dev). It also transpiles to JavaScript so that it can run in a web browser.
 Using Dart as our frontend language was a terrible idea. The developer experience might've been _a bit_ better than JavaScript, but we paid the price by worsening our debugging capabilities. Once Dart was transpiled into JavaScript, it was almost impossible to debug. We wasted many hours chasing frontend bugs because of this.
 
 ### C# wasn't the _best_ choice
 
-Aside from the frontend, choosing C# also turned out to be a bad decision for AccuMap. Since .NET Core was still in it's infancy at the time, we chose to stick with .NET Framework, which required a Windows server with IIS to run.
+Choosing C# also turned out to be a bad decision for AccuMap. Since .NET Core was still in it's infancy at the time, we chose to stick with .NET Framework, which required a Windows server with IIS to run.
 Not only was IIS a terrible experience, but our server provider also charged quite a bit of money for the server. We could've gotten a much more powerful linux VM for the same price.
 
 ### The final nail in the coffin
 
 One of the main issues with AccuMap was the lack of support from the community. None of us on the AccuMap team were keen on paying for the Windows server to keep it running, and with the community donations slowing down, we decided to pull the plug and shut AccuMap down until we either migrated to ASP.NET Core, or were earning enough from our jobs to be able to pay for the server.
 
-Since then, the original domain name has been taken by scammers, and the source code has remained untouched since 2018.
+Since then, the original domain name has unfortunately been taken by scammers, and the source code has remained untouched since 2018.
 
 ## Lessons Learned
 
 Looking back on it, we made some pretty _"interesting"_ decisions when designing and developing AccuMap.
-Something to bear in mind is that we were all amateur programmers at the time, and we had very little exposure to "real-world" code. We mostly went with whatever worked and stuck with it.
+Something to bear in mind is that we were all amateur programmers at the time, and we had very little exposure to "real-world" code. This was our first ever major software project (first ever project for some of us), so we were all developing some core skills, learning new things, and having a bit of fun in the process.
 
-We've come a long way since then and we've learned a lot while building AccuMap.
+We've come a long way since then and we've learned a lot from the mistakes we made while building AccuMap.
 
 ### Use the right tool for the job
 
@@ -207,4 +206,4 @@ AccuMap also played a key role in advancing our career as developers. We learned
 It's been a few years since AccuMap officially shut down. Most of the original team still chat regularly, and we've been thinking about what the potential future of AccuMap could look like.
 
 Will there be a v3? Honestly, who knows?
-We're not "actively" working on anything at the moment, but we're certainly throwing ideas around, thinking about how a potential v3 might look.
+We're not "actively" working on anything at the moment, but we're certainly throwing ideas around, thinking about what a potential v3 might look.
