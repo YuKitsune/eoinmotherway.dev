@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language }}">
+<head>
+  {{ block "title" . }}
+    <title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}</title>
+  {{ end }}
+  {{ partial "head.html" . }}
+</head>
+<body class="flex flex-col flex-grow justify-center min-h-screen p-6 lg:px-36 xl:px-72">
+
+    {{ partial "header.html" . }}
+
+    <div class="flex-1">
+        {{ block "main" . }}
+        {{ end }}
+    </div>
+
+    <hr />
+
+    <div>
+        {{ block "footer" . }}
+            {{ partial "footer.html" . }}
+        {{ end }}
+    </div>
+
+</body>
+</html>

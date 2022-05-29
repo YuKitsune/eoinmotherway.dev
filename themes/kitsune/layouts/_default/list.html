@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+    <!-- Index page content -->
+    {{ with .Content }}
+        <div>
+            {{ . }}
+        </div>
+    {{ end }}
+    
+    <!-- Post list -->
+    <div class="grid gap-12 grid-cols-1 lg:grid-cols-2">
+        {{ range .Paginator.Pages }}
+            {{ partial "preview.html" . }}
+        {{ end }}
+
+        {{ partial "pagination.html" . }}
+    </div>
+{{ end }}

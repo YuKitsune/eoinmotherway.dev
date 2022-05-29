@@ -1,0 +1,14 @@
+<header class="w-full mb-5">
+    <div class="flex justify-between items-center py-2">
+
+        <!-- Logo -->
+        <div class="menu-button">
+            <a href="{{ "/" | absURL }}">🦊</a>
+        </div>
+        
+        <!-- Menu Items -->
+        {{ if len $.Site.Menus }}
+            {{ partial "menu.html" . }}
+        {{ end }}
+    </div>
+</header>

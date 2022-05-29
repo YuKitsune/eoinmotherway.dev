@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <h1 class="text-lg">404 — {{ $.Site.Params.missingContentMessage | default "Page not found..." }}</h1>
+
+    <div>
+        <a href="{{ "/" | absURL }}">Take me home</a>
+    </div>
+
+    </div>
+{{ end }}

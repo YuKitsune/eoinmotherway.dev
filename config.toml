@@ -1,7 +1,7 @@
 baseURL = 'https://yukitsune.dev/'
 languageCode = 'en-au'
 title = 'YuKitsune.dev'
-theme = 'terminal'
+theme = 'kitsune'
 paginate = 5
 enableGitInfo = true
 enableRobotsTXT = true

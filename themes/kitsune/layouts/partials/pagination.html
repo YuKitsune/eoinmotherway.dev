@@ -1,0 +1,18 @@
+<div class="flex flex-row justify-between">
+    {{ if .Paginator.HasPrev }}
+        <span>
+            <a href="{{ .Paginator.Prev.URL }}">
+                <span>←</span>
+                <span>{{ $.Site.Params.newerPosts | default "Newer posts" }}</span>
+            </a>
+        </span>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+        <span class="ml-auto">
+            <a href="{{ .Paginator.Next.URL }}">
+                <span>{{ $.Site.Params.olderPosts | default "Older posts" }}</span>
+                <span>→</span>
+            </a>
+        </span>
+    {{ end }}
+</div>

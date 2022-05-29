@@ -1,0 +1,17 @@
+<div class="flex flex-col gap-1">
+    {{ partial "post_metadata.html" . }}
+
+    <!-- Summary -->
+    <div class="post-summary">
+        {{ if .Description }}
+            {{ .Description | markdownify }}
+        {{ else }}
+            {{ .Summary | markdownify }}
+        {{ end }}
+    </div>
+
+    <!-- Read More button -->
+    <div>
+        <a href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+    </div>
+</div>

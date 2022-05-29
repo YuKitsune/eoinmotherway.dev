@@ -4,7 +4,7 @@ showLastUpdated = false
 readingTime = false
 +++
 
-Hi!, I'm Eoin 👋
+# Hi!, I'm Eoin 👋
 
 I'm Software Engineer at [Octopus Deploy](https://octopus.com) 🐙
 

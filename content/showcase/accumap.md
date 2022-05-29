@@ -5,6 +5,7 @@ cover = "/images/accumap/cover.png"
 tags = ["map", "flight simulation", "vatsim"]
 keywords = ["accumap", "vatsim", "map"]
 draft = false
+author = "Eoin Motherway"
 +++
 
 ## What was AccuMap?

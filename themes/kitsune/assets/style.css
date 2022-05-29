@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Don't apply any margin to the first header */
+.heading:first-child {
+    @apply mt-0;
+}
+
+h1 {
+    @apply heading text-5xl mt-12;
+}
+
+h2 {
+    @apply heading text-4xl mt-10;
+}
+
+h3 {
+    @apply heading text-3xl mt-8;
+}
+
+h4 {
+    @apply heading text-2xl mt-6;
+}
+
+h5 {
+    @apply heading text-xl mt-4;
+}
+
+h6 {
+    @apply heading text-lg mt-2;
+}
+
+a {
+    @apply text-violet-500 hover:underline
+}
+
+.menu-active {
+    display: block;
+}
+
+.menu-button {
+    @apply text-inherit px-2 py-1 rounded-xl hover:bg-violet-100 hover:transition-colors;
+}
+
+.menu-button a {
+    @apply text-inherit hover:no-underline;
+}
+
+.tag {
+    @apply text-sm px-1 py-0.5 rounded-lg bg-violet-100 hover:bg-violet-200 hover:transition-colors;
+}
+
+a.tag {
+    @apply text-inherit hover:no-underline;
+}
+
+ul {
+    @apply list-disc list-inside;
+}
+
+ol {
+    @apply list-decimal list-inside;
+}
+
+hr {
+    @apply my-6;
+}
+
+::root {
+    --test: bg-red-500;
+}
+
+code {
+    @apply rounded-md px-0.5 bg-violet-200;
+}
+
+img {
+    @apply m-3 mx-auto rounded-xl;
+}
