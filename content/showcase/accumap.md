@@ -1,5 +1,6 @@
 +++
-title = "AccuMap - A popular map for the VATSIM network"
+title = "AccuMap"
+summary = "A popular map for the VATSIM network."
 date = "2022-03-13"
 cover = "/images/accumap/cover.png"
 tags = ["map", "flight simulation", "vatsim"]

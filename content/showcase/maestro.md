@@ -1,5 +1,6 @@
 +++
-title = "Maestro - A neat way to share music across a variety of different streaming services"
+title = "Maestro"
+summary = "A tool for sharing music across a variety of different streaming services."
 date = "2022-03-13"
 cover = "/images/maestro/cover.png"
 tags = ["music", "sharing", "helm"]
