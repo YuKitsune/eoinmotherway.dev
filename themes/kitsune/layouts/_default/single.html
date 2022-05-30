@@ -1,18 +1,20 @@
 {{ define "main" }}
-    <div class="content">
-        {{ partial "post_metadata.html" . }}
-
-        {{ if (.Params.Toc | default .Site.Params.Toc) }}
-        <div class="table-of-contents">
-            <h2>
-                {{ (.Params.TocTitle | default .Site.Params.TocTitle) | default "Table of Contents" }}
-            </h2>
-            {{ .TableOfContents }}
+    <div class="flex flex-col gap-1">
+        <h1>
+            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        </h3>
+        <div class="flex flex-col md:flex-row md:gap-0">
+            <span>Published on {{ .Date.Format "02 Jan 2006" }}{{ with .Params.Author }} by {{ . }}{{ end }}</span>
+            {{ if and (.Param "readingTime") (eq (.Param "readingTime") true) }}
+                <span class="separator md:block"></span>
+                <span>{{ .ReadingTime }} minutes read ({{ .WordCount }} words)</span>
+            {{ end }}
         </div>
-        {{ end }}
+    
+        {{ partial "cover.html" . }}
 
         {{- with .Content -}}
-            <div>
+            <div class="mt-3">
                 <!-- Inject links into the heading tags -->
                 {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor"
                         ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}

@@ -1,18 +1,21 @@
 {{ define "main" }}
 
-    <!-- Index page content -->
-    {{ with .Content }}
-        <div>
-            {{ . }}
-        </div>
-    {{ end }}
-    
-    <!-- Post list -->
-    <div class="grid gap-12 grid-cols-1 lg:grid-cols-2">
-        {{ range .Paginator.Pages }}
-            {{ partial "preview.html" . }}
+    <div class="flex flex-col gap-3">
+
+        <!-- Index page content -->
+        {{ with .Content }}
+            <div>
+                {{ . }}
+            </div>
         {{ end }}
+        
+        <div class="grid gap-12 grid-cols-1 lg:grid-cols-2">
+            {{ range .Paginator.Pages }}
+                {{ partial "preview.html" . }}
+            {{ end }}
+        </div>
 
         {{ partial "pagination.html" . }}
     </div>
+
 {{ end }}

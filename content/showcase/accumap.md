@@ -1,11 +1,9 @@
 +++
 title = "AccuMap"
-summary = "A popular map for the VATSIM network."
+summary = "A modern and accurate map for the VATSIM network."
 date = "2022-03-13"
 cover = "/images/accumap/cover.png"
-tags = ["map", "flight simulation", "vatsim"]
-keywords = ["accumap", "vatsim", "map"]
-draft = false
+keywords = ["accumap", "vatsim", "flight simulation", "map"]
 author = "Eoin Motherway"
 +++
 

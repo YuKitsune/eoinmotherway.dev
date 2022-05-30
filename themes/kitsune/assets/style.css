@@ -40,7 +40,7 @@ a {
 }
 
 .menu-button {
-    @apply text-inherit px-2 py-1 rounded-xl hover:bg-violet-100 hover:transition-colors;
+    @apply text-inherit px-2 py-1 rounded-xl hover:bg-violet-200 dark:hover:bg-violet-500 hover:transition-colors;
 }
 
 .menu-button a {
@@ -48,7 +48,7 @@ a {
 }
 
 .tag {
-    @apply text-sm px-1 py-0.5 rounded-lg bg-violet-100 hover:bg-violet-200 hover:transition-colors;
+    @apply text-sm px-1 py-0.5 rounded-lg bg-violet-100 hover:bg-violet-200 dark:bg-violet-400 dark:hover:bg-violet-500 hover:transition-colors;
 }
 
 a.tag {
@@ -67,14 +67,11 @@ hr {
     @apply my-6;
 }
 
-::root {
-    --test: bg-red-500;
-}
-
 code {
-    @apply rounded-md px-0.5 bg-violet-200;
+    @apply rounded-md px-0.5 bg-violet-200 dark:bg-violet-400;
 }
 
-img {
-    @apply m-3 mx-auto rounded-xl;
+.separator {
+    @apply mx-2 border-solid border-l-2 border-violet-500;
+    content: "&nbsp;";
 }

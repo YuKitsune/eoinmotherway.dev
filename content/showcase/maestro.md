@@ -3,8 +3,8 @@ title = "Maestro"
 summary = "A tool for sharing music across a variety of different streaming services."
 date = "2022-03-13"
 cover = "/images/maestro/cover.png"
-tags = ["music", "sharing", "helm"]
-keywords = ["music", "sharing"]
+keywords = ["music", "sharing", "helm"]
+author = "Eoin Motherway"
 +++
 
 Maestro is a small web application that lets users share music across a variety of different streaming services.

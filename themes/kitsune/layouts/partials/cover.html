@@ -20,5 +20,6 @@
     <img
         src="{{ $cover }}"
         alt="{{ .Title | plainify | default " " }}"
+        class="aspect-video object-cover rounded-lg drop-shadow-md"
         title="{{ .Params.CoverCredit |plainify|default " Cover Image" }}" />
 {{- end }}

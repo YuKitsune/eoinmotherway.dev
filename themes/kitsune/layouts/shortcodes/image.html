@@ -1,6 +1,7 @@
 {{ if .Get "src" }}
     <img
-        src="{{ .Get " src" | safeURL }}"
+        src="{{ .Get "src" | safeURL }}"
+        class="m-3 mx-auto object-contain rounded-xl"
         {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}
         {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} />
 {{ end }}

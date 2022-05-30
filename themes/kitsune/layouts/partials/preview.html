@@ -1,8 +1,15 @@
 <div class="flex flex-col gap-1">
-    {{ partial "post_metadata.html" . }}
+    <h3>
+        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+    </h3>
+    <div>
+        Published on {{ .Date.Format "02 Jan 2006" }}{{ with .Params.Author }} by {{ . }} {{ end }}
+    </div>
+
+    {{ partial "cover.html" . }}
 
     <!-- Summary -->
-    <div class="post-summary">
+    <div>
         {{ if .Description }}
             {{ .Description | markdownify }}
         {{ else }}

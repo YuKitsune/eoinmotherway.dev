@@ -605,6 +605,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   clear: none;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -709,6 +722,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 .h-\[calc\(100\%-theme\(\'spacing\.1\'\)\)\] {
   height: calc(100% - 0.25rem);
 }
@@ -723,6 +740,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-full {
   width: 100%;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .flex-1 {
@@ -1224,12 +1245,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 3rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -1500,6 +1525,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .break-all {
   word-break: break-all;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded {
@@ -2126,6 +2159,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.drop-shadow-md {
+  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .drop-shadow {
   --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2330,12 +2368,19 @@ a:hover {
 
 .menu-button:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(237 233 254 / var(--tw-bg-opacity));
+  background-color: rgb(221 214 254 / var(--tw-bg-opacity));
   transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  .menu-button:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+  }
 }
 
 .menu-button a {
@@ -2369,6 +2414,18 @@ a:hover {
   transition-duration: 150ms;
 }
 
+@media (prefers-color-scheme: dark) {
+  .tag {
+    --tw-bg-opacity: 1;
+    background-color: rgb(167 139 250 / var(--tw-bg-opacity));
+  }
+
+  .tag:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+  }
+}
+
 a.tag {
   color: inherit;
 }
@@ -2393,10 +2450,6 @@ hr {
   margin-bottom: 1.5rem;
 }
 
-::root {
-  --test: bg-red-500;
-}
-
 code {
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
@@ -2405,11 +2458,21 @@ code {
   padding-right: 0.125rem;
 }
 
-img {
-  margin: 0.75rem;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.75rem;
+@media (prefers-color-scheme: dark) {
+  code {
+    --tw-bg-opacity: 1;
+    background-color: rgb(167 139 250 / var(--tw-bg-opacity));
+  }
+}
+
+.separator {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-left-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(139 92 246 / var(--tw-border-opacity));
+  content: "&nbsp;";
 }
 
 .hover\:font-bold:hover {
@@ -2432,6 +2495,18 @@ img {
 
 .focus\:hover\:text-center:hover:focus {
   text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-slate-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }
 
 @media (min-width: 640px) {
@@ -2475,6 +2550,20 @@ img {
   }
 }
 
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:gap-0 {
+    gap: 0px;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:block {
     display: block;
@@ -2495,11 +2584,6 @@ img {
   .lg\:flex-row {
     flex-direction: row;
   }
-
-  .lg\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2507,12 +2591,5 @@ img {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;
     }
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:px-72 {
-    padding-left: 18rem;
-    padding-right: 18rem;
   }
 }
