@@ -21,6 +21,6 @@
 
     <!-- Read More button -->
     <div>
-        <a href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+        <a href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore | default "Read more"}} →</a>
     </div>
 </div>
