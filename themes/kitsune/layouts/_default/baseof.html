@@ -2,15 +2,17 @@
 <html lang="{{ $.Site.Language }}">
 <head>
   {{ block "title" . }}
-    <title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} - {{ $.Site.Title }}{{ end }}</title>
   {{ end }}
   {{ partial "head.html" . }}
 </head>
 <body class="flex flex-col flex-grow justify-center min-h-screen p-6 max-w-3xl mx-auto bg-background dark:bg-slate-800 dark:text-white">
 
-    {{ partial "header.html" . }}
+    <div class="mb-5">
+      {{ partial "header.html" . }}
+    </div>
 
-    <div class="flex-1">
+    <div class="flex-1 flex">
         {{ block "main" . }}
         {{ end }}
     </div>

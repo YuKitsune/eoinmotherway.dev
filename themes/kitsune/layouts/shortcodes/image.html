@@ -1,7 +1,7 @@
 {{ if .Get "src" }}
     <img
         src="{{ .Get "src" | safeURL }}"
-        class="m-3 mx-auto object-contain rounded-xl"
+        class="m-3 mx-auto object-contain rounded-lg"
         {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}
         {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} />
 {{ end }}

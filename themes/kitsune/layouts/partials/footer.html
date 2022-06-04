@@ -4,14 +4,16 @@
     {{ partial "extended_footer.html" . }}
 
     <div class="flex flex-col justify-center items-center pb-5">
-        {{ if $.Site.Copyright }}
-        <div class="copyright copyright--user">
-            <span>{{ $.Site.Copyright | safeHTML }}</span>
-        {{ else }}
-        <div class="copyright">
-            <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
-        {{ end }}
-            <span>Theme made by <a href="https://twitter.com/yukitsune">YuKitsune</a></span>
+        <div>
+            {{ if $.Site.Copyright }}
+                <span>{{ $.Site.Copyright | safeHTML }}</span>
+            {{ else }}
+                <span>© {{ now.Year }}</span>
+            {{ end }}
+            <span class="separator"></span>
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span class="separator"></span>
+            <span>Theme made by <a href="https://github.com/yukitsune">YuKitsune</a></span>
         </div>
     </div>
 

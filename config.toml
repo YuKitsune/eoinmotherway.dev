@@ -1,6 +1,5 @@
 baseURL = 'https://yukitsune.dev/'
-languageCode = 'en-au'
-title = 'YuKitsune.dev'
+languageCode = 'en'
 theme = 'kitsune'
 paginate = 5
 enableGitInfo = true
@@ -11,42 +10,28 @@ enableRobotsTXT = true
     privacyEnhanced = true
 
 [params]
-    themeColor = "pink"
     showMenuItems = 3
-    centerTheme = true
     showLastUpdated = true
     readingTime = true
+    favicon = 'favicon-128.png'
 
-[params.twitter]
-    # set Twitter handles for Twitter cards
-    # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-    # do not include @
-    creator = "YuKitsune256"
-    site = "https://yukitsune.dev"
-
+    [params.twitter]
+        # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+        # do not include @
+        creator = "YuKitsune256"
 
 [languages]
     [languages.en]
         languageName = "English"
         title = "Eoin Motherway"
         subtitle = "Making computers go beep and boop"
-        owner = ""
-        keywords = ""
-        copyright = ""
-        menuMore = "Show more"
-        readMore = "Read more"
-        readOtherPosts = "Read other posts"
-        newerPosts = "Newer posts"
-        olderPosts = "Older posts"
-        missingContentMessage = "Page not found..."
-        missingBackButtonLabel = "Back to home page"
+        copyright = '© 2022 Eoin Motherway'
 
     [languages.en.params.logo]
         logoText = "Eoin Motherway"
         logoHomeLink = "/"
 
     [languages.en.menu]
-        
         [[languages.en.menu.main]]
             identifier = "showcase"
             name = "Showcase"
