@@ -4,7 +4,8 @@
   "description": "A simple Hugo theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./static/css/style.css --jit --watch",
+    "build": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./static/css/style.css"
   },
   "author": "Eoin Motherway",
   "license": "MIT",

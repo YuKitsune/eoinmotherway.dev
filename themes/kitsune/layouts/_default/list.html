@@ -10,7 +10,7 @@
         {{ end }}
         
         <!-- Paginated items -->
-        <div class="grid gap-12 grid-cols-1 lg:grid-cols-2">
+        <div class="flex flex-col gap-6">
             {{ range .Paginator.Pages }}
                 {{ partial "preview.html" . }}
             {{ end }}

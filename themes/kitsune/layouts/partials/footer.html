@@ -3,8 +3,8 @@
     <!-- Extended footer section-->
     {{ partial "extended_footer.html" . }}
 
-    <div class="flex flex-col justify-center items-center pb-5">
-        <div>
+    <div class="flex justify-center items-center pb-5">
+        <div class="flex gap-1">
             {{ if $.Site.Copyright }}
                 <span>{{ $.Site.Copyright | safeHTML }}</span>
             {{ else }}
