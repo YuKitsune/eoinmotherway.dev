@@ -7,26 +7,45 @@ keywords = ["music", "sharing", "helm"]
 author = "Eoin Motherway"
 +++
 
+## What is Maestro?
+
 Maestro is a small web application that lets users share music across a variety of different streaming services.
-The idea came about after I decided to switch from one music streaming service to another, and lost the ability to share music with my friends and colleagues.
 
-## How it works
+## How does it work?
 
-Maestro accepts share links from a number of different music streaming services.
-Once Maestro has received a link, it determines what streaming service the link belongs to (based on the domain name), then uses that streaming services REST API to query for the artist, album or track metadata.
+Maestro accepts links to artists, albums, and tracks from a number of different music streaming services.
 
-Once Maestro has the metadata, it then performs a search request against the remaining streaming services search APIs.
-Once Maestro has results from all streaming services, it groups them together, stores them in a database so that it can be retrieved later, and then presents the results to the user.
+If Maestro has seen the given link before, it'll return a cached set of results from it's database.
+If Maestro hasn't seen the link before, it determines which streaming service the link came from (based on the domain name), then uses that streaming services REST API to get some metadata for the artist, album or track.
 
-All-in-all, not too complicated!
+Once Maestro has the metadata from the originating streaming service, it then queries the remaining streaming service APIs.
+It then groups the results together, stores them in a database, and then presents the results to the user.
 
-## How it runs
+Overall, not too complicated, and it works like magic!
 
-Currently, Maestro has a [Helm chart](https://github.com/YuKitsune/Maestro/blob/main/deployments/helm/maestro/README.md) available for those who'd like to run their own instance in a Kubernetes cluster. This is how it's run on [maestro.yukitsune.dev](https://maestro.yukitsune.dev).
+{{< image src="/images/maestro/example.gif" alt="An example of Maestro in use" >}}
 
-## Future plans
+## How does it run?
 
-Eventually, I want Maestro to be able to share playlists between services, allowing users to import and maintain playlists from other streaming services.
+The frontend is powered by [Remix.run](https://remix.run) and [Tailwind CSS](https://tailwindcss.com), the backend is a simple REST API written in Go, and the database is a managed [MongoDB](https://www.mongodb.com) database provided by [DigitalOcean](https://www.digitalocean.com/products/managed-databases) ([Heres a referral if you want some credit](https://m.do.co/c/9cc994ee28e7)).
+
+The frontend and backend are bundled as a [Helm chart](https://github.com/YuKitsune/Maestro/blob/main/deployments/helm/maestro/README.md), and deployed to a managed Kubernetes cluster, also provided by DigitalOcean.
+
+{{< image src="/images/maestro/diagram.png" alt="Architecture diagram" >}}
+
+## Why?
+
+There are lots of different music streaming services out there, and it can be easy to forget that not everyone uses Spotify. Normally, when two people use different music streaming services and they want to share music with each other, the recipient would usually have to search for the same artist, album or track on their own service, which can be inconvenient.
+
+Maestro solves this by doing the hard work for you, aggregating all the links in one place, and providing a new, sharable link to the content.
+
+{{< image src="/images/maestro/embed.png" alt="Maestro link embedded into a Discord chat" >}}
+
+Maestro also served as a learning project for myself, as it helped me learn more about the Go programming language, the Remix framework, and MongoDB.
+
+## What's next?
+
+I'm currently looking into supporting playlists and expanding the current list of supported streaming services. If you'd like to help out, feel free to submit a pull request!
 
 ## Source
 
