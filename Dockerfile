@@ -1,33 +1,10 @@
-# Base Node.js image
-FROM node:16-bullseye-slim as base
-ENV NODE_ENV=production
-
-FROM base as deps
-
-RUN mkdir /theme
-WORKDIR /theme
-
-COPY package.json package-lock.json ./
-RUN npm install --production=false
-
-FROM base as production-deps
-
-RUN mkdir /theme
-WORKDIR /theme
-
-COPY --from=deps /theme/node_modules /theme/node_modules
-COPY package.json package-lock.json ./
-RUN npm prune --production
-
 # Build the theme
-FROM base as build
+FROM node:16-bullseye-slim as build
 
-RUN mkdir /theme
+COPY ["./themes/kitsune", "./theme"]
 WORKDIR /theme
 
-COPY --from=deps /theme/node_modules /app/node_modules
-
-COPY . .
+RUN npm install
 RUN npm run build
 
 # Serve the site
