@@ -8,7 +8,7 @@
 }
 
 body {
-    @apply dark:bg-stone-900 dark:text-white
+    @apply bg-zinc-50 dark:bg-zinc-900 dark:text-white
 }
 
 h1 {
@@ -53,6 +53,10 @@ hr {
 
 code {
     @apply rounded-md px-0.5 bg-violet-200 dark:bg-violet-400;
+}
+
+p {
+    @apply my-3;
 }
 
 .menu-active {
