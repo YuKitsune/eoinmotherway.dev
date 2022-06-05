@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./static/css/style.css --jit --watch",
-    "build": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./static/css/style.css"
+    "build": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./static/css/style.css --minify"
   },
   "author": "Eoin Motherway",
   "license": "MIT",
