@@ -4,6 +4,8 @@
     {{ $style := .Get "alt" }}
 
     {{ with resources.Get $src }}
+
+        <!-- Convert all images to webp -->
         {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
             <img
                 src="{{ .RelPermalink }}"
@@ -14,5 +16,6 @@
                 {{ with $style }} style="{{ . | safeCSS }}" {{ end }}
                 loading="lazy" />
         {{ end }}
+
     {{ end }}
 {{ end }}
