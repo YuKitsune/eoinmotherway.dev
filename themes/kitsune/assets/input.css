@@ -63,11 +63,16 @@ p {
     @apply text-inherit px-2 py-1 rounded-xl hover:bg-violet-200 dark:hover:bg-violet-500 hover:transition-colors;
 }
 
-.menu-button a {
+.menu-button {
     @apply text-inherit hover:no-underline;
 }
 
 .separator {
     @apply mx-2 border-solid border-l-2 border-violet-500;
     content: "&nbsp;";
+}
+
+.hanchor::after {
+    @apply ml-1;
+    content: "#";
 }
