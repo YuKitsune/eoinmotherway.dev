@@ -1,7 +1,18 @@
+{{ $alt := .Get "alt" }}
+{{ $style := .Get "alt" }}
+
 {{ if .Get "src" }}
-    <img
-        src="{{ .Get "src" | safeURL }}"
-        class="m-3 mx-auto object-contain rounded-lg"
-        {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}
-        {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} />
+    {{ $src := .Get "src" }}
+    {{ with resources.Get $src }}
+        {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+            <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                class="m-3 mx-auto object-contain rounded-lg"
+                {{ with $alt }} alt="{{ . | plainify }}" {{ end }}
+                {{ with $style }} style="{{ . | safeCSS }}" {{ end }}
+                loading="lazy" />
+        {{ end }}
+    {{ end }}
 {{ end }}
