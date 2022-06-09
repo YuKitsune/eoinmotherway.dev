@@ -1,8 +1,8 @@
-{{ $alt := .Get "alt" }}
-{{ $style := .Get "alt" }}
-
 {{ if .Get "src" }}
     {{ $src := .Get "src" }}
+    {{ $alt := .Get "alt" }}
+    {{ $style := .Get "alt" }}
+
     {{ with resources.Get $src }}
         {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
             <img
