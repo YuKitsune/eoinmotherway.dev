@@ -102,8 +102,6 @@ For us, having our project showcased on a news site was a big deal, and a really
 
 ### More bugs than we thought
 
-{{< image src="https://c.tenor.com/vlHrAxHFvegAAAAd/here-it-comes-tornado.gif" >}}
-
 Not long after the release of the desktop application, it became clear that it wasn't as stable as we originally thought it was.
 The program riddled with issues such as memory leaks, performance issues, disappearing pilots and air traffic controllers, and a flakey auto-update system that never worked. We often had to tell our users to re-download the installer from our website to receive updates, which was embarrassing to say the least.
 
@@ -167,7 +165,7 @@ Dart wasn't designed with web browser support in mind. It was designed primarily
 
 While C# is a fantastic language, we chose it at a time when it's linux support wasn't quite up to the task of what we wanted to do. Because of this, we required a Windows server with IIS to run it in production, which was a pain to use, and accounted for almost 50% of the running costs.
 
-### Learn to Prioritize
+### Learn to prioritize
 
 Bugs are inevitable, especially for a project built by a bunch of amateurs. They can significantly affect the user experience, or even render the application unusable in some cases.
 
