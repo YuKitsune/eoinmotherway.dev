@@ -1,11 +1,13 @@
 {{ define "main" }}
     
+    <!-- If anything was defined, then display it as an article -->
     {{ if .Content }}
         <article class="self-center">
             {{ .Content }}
         </article>
     {{ end }}
 
+    <!-- Todo: Implement pagination -->
     <!-- Paginated posts -->
     <!--
     <div class="flex flex-col gap-12">
