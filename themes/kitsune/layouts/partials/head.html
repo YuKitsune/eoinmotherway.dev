@@ -6,12 +6,8 @@
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <!-- Theme CSS -->
-<link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
-
-<!-- Custom CSS to override theme properties (/static/style.css) -->
-{{ if (fileExists "static/style.css") -}}
-    <link rel="stylesheet" href="{{ "style.css" | absURL }}">
-{{- end }}
+{{ $css := resources.Get "style.css" | minify | fingerprint}}
+<link rel="stylesheet" href="{{ $css.Permalink | absURL }}">
 
 <!-- Icons -->
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon-180x180.png" | absURL }}">

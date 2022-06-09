@@ -4,8 +4,8 @@
   "description": "A simple Hugo theme",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./static/css/style.css --jit --watch",
-    "build": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./static/css/style.css --minify"
+    "dev": "tailwindcss -c ./tailwind.config.js -i ./assets/input.css -o ./assets/style.css --jit --watch",
+    "build": "tailwindcss -c ./tailwind.config.js -i ./assets/input.css -o ./assets/style.css --minify"
   },
   "author": "Eoin Motherway",
   "license": "MIT",
