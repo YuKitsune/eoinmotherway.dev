@@ -1,24 +1,22 @@
 <nav class="flex flex-wrap flex-col lg:flex-row text-lg pl-5 text-right">
 
     <!-- Hidden checkbox to show/hide the menu for smaller devices -->
-    <label for="menu-toggle" class="lg:hidden cursor-pointer block menu-button">Menu</label>
-    <input type="checkbox" id="menu-toggle" class="hidden" />
+    <button class="lg:hidden cursor-pointer block menu-button" onclick="toggleMenu()">Menu</button>
 
     <!-- Menu items -->
     <div id="menu" class="hidden lg:block">
-        <ul class="lg:flex items-center justify-between gap-5 list-none">
+        <div class="flex flex-col lg:flex-row items-center justify-between lg:gap-5 list-none">
             {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
-                <li class="menu-button"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                <a class="menu-button" href="{{ .URL }}">{{ .Name }}</a>
             {{ end }}
-        </ul>
+        </d>
     </div>
 
     <script type="text/javascript">
-        let menuToggle = document.getElementById('menu-toggle');
         let menu = document.getElementById('menu');
-        menuToggle.addEventListener('click', function() {
+        function toggleMenu() {
             menu.classList.toggle('menu-active');
-        });
+        }
     </script>
 </nav>
   

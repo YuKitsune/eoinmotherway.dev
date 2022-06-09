@@ -22,11 +22,11 @@
         </div>
 
         {{- with .Content -}}
-            <div class="mt-3">
+            <article class="mt-3">
                 <!-- Inject links into the heading tags -->
                 {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor"
                         ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
-            </div>
+            </article>
         {{- end -}}
     </div>
 {{ end }}
