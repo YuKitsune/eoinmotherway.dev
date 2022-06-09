@@ -23,9 +23,8 @@
 
         {{- with .Content -}}
             <article class="mt-3">
-                <!-- Inject links into the heading tags -->
-                {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor"
-                        ariaLabel="Anchor"></a> ${3}` | safeHTML }}
+                <!-- Todo: Inject links into the heading tags -->
+                {{ . }}
             </article>
         {{- end -}}
     </div>

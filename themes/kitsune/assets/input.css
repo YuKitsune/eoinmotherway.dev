@@ -71,8 +71,3 @@ p {
     @apply mx-2 border-solid border-l-2 border-violet-500;
     content: "&nbsp;";
 }
-
-.hanchor::after {
-    @apply ml-1;
-    content: "#";
-}
