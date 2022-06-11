@@ -36,7 +36,7 @@ h6 {
 }
 
 a {
-    @apply text-violet-500 hover:underline
+    @apply text-violet-600 dark:text-violet-400 hover:underline
 }
 
 ul {
@@ -60,14 +60,14 @@ p {
 }
 
 .menu-button {
-    @apply text-inherit px-2 py-1 rounded-xl hover:bg-violet-200 dark:hover:bg-violet-500 hover:transition-colors;
-}
-
-.menu-button {
-    @apply text-inherit hover:no-underline;
+    @apply text-inherit px-2 py-1 rounded-xl hover:bg-violet-200 dark:hover:bg-violet-600 hover:transition-colors hover:no-underline;
 }
 
 .separator {
-    @apply mx-2 border-solid border-l-2 border-violet-500;
+    @apply mx-2 border-solid border-l-2 border-violet-600 dark:border-violet-400;
     content: "&nbsp;";
+}
+
+.heading-anchor {
+    @apply ml-1;
 }
