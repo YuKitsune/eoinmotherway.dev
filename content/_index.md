@@ -12,3 +12,4 @@ I'm also a big fan of DevOps, automation, software architecture, privacy and sec
 You can find me on [GitHub](https://github.com/yukitsune), [Twitter](https://twitter.com/yukitsune256), or [Linkedin](https://www.linkedin.com/in/eoinmoth).
 
 If you'd like to support me, consider [shouting me a coffee](https://www.buymeacoffee.com/yukitsune256)!
+I also have a [referral code for DigitalOcean](https://m.do.co/c/9cc994ee28e7) if you'd like $100 credit.
