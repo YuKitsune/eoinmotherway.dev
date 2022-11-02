@@ -1,6 +1,16 @@
 {{ define "main" }}
 
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-3 grow">
+
+        <!-- Header -->
+        <!-- Todo: fix Weird bug where bold headings clip outside the div -->
+        {{ with .Title }}
+            <div class="grid justify-items-center">
+                <h1 class="pb-1">
+                    {{ . | markdownify }}
+                </h1>
+            </div>
+        {{ end }}
 
         <!-- Index page content -->
         {{ with .Content }}

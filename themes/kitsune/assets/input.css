@@ -53,7 +53,7 @@ h6 {
 }
 
 a {
-    @apply text-violet-600 dark:text-violet-400 hover:underline
+    @apply text-violet-600 hover:text-cyan-400 dark:text-violet-400 dark:hover:text-cyan-500 hover:underline
 }
 
 ul {
@@ -91,4 +91,9 @@ svg {
 
 .heading-anchor {
     @apply ml-1;
+}
+
+.hamburger {
+    z-index: 100;
+    @apply bg-zinc-50 dark:bg-zinc-900 absolute top-0 left-0 right-0 bottom-0;
 }

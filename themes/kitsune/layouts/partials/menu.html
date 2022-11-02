@@ -1,22 +1,31 @@
 <nav class="flex flex-wrap flex-col lg:flex-row text-lg pl-5 text-right">
 
-    <!-- Show/hide the menu for smaller screen sizes -->
-    <button class="lg:hidden cursor-pointer block menu-button" onclick="toggleMenu()">Menu</button>
-
-    <!-- Menu items -->
+    <!-- Standard menu -->
     <div id="menu" class="hidden lg:block">
         <div class="flex flex-col lg:flex-row items-center justify-between lg:gap-5 list-none">
             {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
                 <a class="menu-button" href="{{ .URL }}">{{ .Name }}</a>
             {{ end }}
-        </d>
+        </div>
+    </div>
+
+    <!-- Show/hide the menu for smaller screen sizes -->
+    <button class="lg:hidden cursor-pointer block menu-button" onclick="toggleMenu()">Menu</button>
+
+    <!-- Hamburger menu -->
+    <div id="hamburger-menu" class="hamburger flex flex-col items-center content-center gap-5 hidden" aria-hidden="true">
+
+        <button class="cursor-pointer block menu-button" onclick="toggleMenu()">Exit</button>
+
+        {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
+            <a href="{{ .URL }}" class="title text-5xl">{{ .Name }}</a>
+        {{ end }}
     </div>
 
     <script type="text/javascript">
-        let menu = document.getElementById('menu');
+        let menu = document.getElementById('hamburger-menu');
         function toggleMenu() {
-            menu.classList.toggle('menu-active');
+            menu.classList.toggle('hidden');
         }
     </script>
 </nav>
-  

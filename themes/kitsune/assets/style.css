@@ -766,8 +766,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-grow: 1;
 }
 
-.basis-1\/3 {
-  flex-basis: 33.333333%;
+.basis-1\/2 {
+  flex-basis: 50%;
 }
 
 .table-auto {
@@ -1255,6 +1255,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -1850,6 +1854,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .uppercase {
@@ -2450,6 +2459,8 @@ a {
 }
 
 a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(34 211 238 / var(--tw-text-opacity));
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
@@ -2458,6 +2469,11 @@ a:hover {
   a {
     --tw-text-opacity: 1;
     color: rgb(167 139 250 / var(--tw-text-opacity));
+  }
+
+  a:hover {
+    --tw-text-opacity: 1;
+    color: rgb(6 182 212 / var(--tw-text-opacity));
   }
 }
 
@@ -2555,6 +2571,24 @@ svg:hover {
 
 .heading-anchor {
   margin-left: 0.25rem;
+}
+
+.hamburger {
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .hamburger {
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+  }
 }
 
 .hover\:font-bold:hover {
