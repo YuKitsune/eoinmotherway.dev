@@ -4,22 +4,18 @@
     {{ partial "extended_footer.html" . }}
 
     <div class="flex justify-between text-center">
-        <div class="basis-1/3">
+        <div class="basis-1/2 text-right">
             {{ if $.Site.Copyright }}
                 <span>{{ $.Site.Copyright | safeHTML }}</span>
             {{ else }}
                 <span>© {{ now.Year }}</span>
             {{ end }}
         </div>
-        <div class="basis-1/3">
+        <span class="separator"></span>
+        <div class="basis-1/2">
             <div class="flex flex-grow justify-between">
-                <span class="separator"></span>
                 <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
-                <span class="separator"></span>
             </div>
-        </div>
-        <div class="basis-1/3">
-            <span>Theme made by <a href="https://github.com/yukitsune">YuKitsune</a></span>
         </div>
     </div>
 
