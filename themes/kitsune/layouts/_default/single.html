@@ -1,9 +1,11 @@
 {{ define "main" }}
     <div class="flex flex-col gap-1">
-        <h1>
-            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-        </h3>
-        <div class="flex flex-wrap md:gap-0">
+        <div>
+            <h1>
+                {{ .Title | markdownify }}
+            </h1>
+        </div>
+        <div class="flex flex-wrap mt-1 md:gap-0">
             
             <!-- Published date -->
             <!-- <span>Published on {{ .Date.Format "02 Jan 2006" }}{{ with .Params.Author }} by {{ . }}{{ end }}</span> -->
