@@ -1,7 +1,8 @@
 {{ define "main" }}
     <div class="flex flex-col gap-1">
         <div>
-            <h1>
+            <!-- Todo: fixWeird bug where bold headings clip outside the div -->
+            <h1 class="pb-1"> 
                 {{ .Title | markdownify }}
             </h1>
         </div>

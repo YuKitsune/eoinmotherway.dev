@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.pretty {
+    @apply bg-gradient-to-r from-violet-600 to-cyan-400 dark:from-violet-400 dark:to-cyan-500 text-transparent bg-clip-text decoration-violet-600 dark:decoration-violet-400;
+}
+
+.title {
+    @apply pretty font-bold inline-block;
+}
+
+a.title {
+    @apply decoration-violet-600 dark:decoration-violet-400;
+}
+
+/* Only do the sexy thing to the first H1 */
+h1:first-child {
+    @apply title
+}
+
 /* Don't apply any margin to the first header */
 .heading:first-child {
     @apply mt-0;

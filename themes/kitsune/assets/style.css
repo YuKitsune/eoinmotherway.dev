@@ -618,6 +618,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.25rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -1779,6 +1783,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.25rem;
 }
 
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
 .pl-5 {
   padding-left: 1.25rem;
 }
@@ -2258,6 +2266,102 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\[content\:\"hello\"\] {
   content: "hello";
+}
+
+.pretty {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #7c3aed;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(124 58 237 / 0));
+  --tw-gradient-to: #22d3ee;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-text-decoration-color: #7c3aed;
+          text-decoration-color: #7c3aed;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pretty {
+    --tw-gradient-from: #a78bfa;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(167 139 250 / 0));
+    --tw-gradient-to: #06b6d4;
+    -webkit-text-decoration-color: #a78bfa;
+            text-decoration-color: #a78bfa;
+  }
+}
+
+.title {
+  display: inline-block;
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #7c3aed;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(124 58 237 / 0));
+  --tw-gradient-to: #22d3ee;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-text-decoration-color: #7c3aed;
+          text-decoration-color: #7c3aed;
+}
+
+@media (prefers-color-scheme: dark) {
+  .title {
+    --tw-gradient-from: #a78bfa;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(167 139 250 / 0));
+    --tw-gradient-to: #06b6d4;
+    -webkit-text-decoration-color: #a78bfa;
+            text-decoration-color: #a78bfa;
+  }
+}
+
+a.title {
+  -webkit-text-decoration-color: #7c3aed;
+          text-decoration-color: #7c3aed;
+}
+
+@media (prefers-color-scheme: dark) {
+  a.title {
+    -webkit-text-decoration-color: #a78bfa;
+            text-decoration-color: #a78bfa;
+  }
+}
+
+/* Only do the sexy thing to the first H1 */
+
+h1:first-child {
+  display: inline-block;
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #7c3aed;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(124 58 237 / 0));
+  --tw-gradient-to: #22d3ee;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-text-decoration-color: #7c3aed;
+          text-decoration-color: #7c3aed;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1:first-child {
+    --tw-gradient-from: #a78bfa;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(167 139 250 / 0));
+    --tw-gradient-to: #06b6d4;
+    -webkit-text-decoration-color: #a78bfa;
+            text-decoration-color: #a78bfa;
+  }
+}
+
+ah1:first-child {
+  -webkit-text-decoration-color: #7c3aed;
+          text-decoration-color: #7c3aed;
+}
+
+@media (prefers-color-scheme: dark) {
+  ah1:first-child {
+    -webkit-text-decoration-color: #a78bfa;
+            text-decoration-color: #a78bfa;
+  }
 }
 
 /* Don't apply any margin to the first header */
