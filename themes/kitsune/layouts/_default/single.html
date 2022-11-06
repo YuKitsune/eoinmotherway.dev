@@ -27,7 +27,7 @@
         {{- with .Content -}}
             <article class="mt-3">
                 <!-- Inject links into the heading tags -->
-                {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="heading-anchor" aria-hidden="true" tabindex="-1">#</a> ${3}` | safeHTML }}
+                {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="heading-anchor" aria-hidden="true" role="presentation" tabindex="-1">#</a> ${3}` | safeHTML }}
             </article>
         {{- end -}}
     </div>
