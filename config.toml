@@ -1,6 +1,5 @@
 baseURL = 'https://yukitsune.dev/'
 languageCode = 'en'
-theme = 'kitsune'
 paginate = 5
 enableGitInfo = true
 enableRobotsTXT = true

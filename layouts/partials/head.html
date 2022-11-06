@@ -6,7 +6,7 @@
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <!-- Theme CSS -->
-{{ $css := resources.Get "style.css" | minify | fingerprint}}
+{{ $css := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink | absURL }}">
 
 <!-- Icons -->
