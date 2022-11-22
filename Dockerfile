@@ -1,8 +1,8 @@
-# Build the theme
-FROM node:16-bullseye-slim as build-theme
+# Build the CSS
+FROM node:16-bullseye-slim as build-css
 
-COPY ["./themes/kitsune", "./theme"]
-WORKDIR /theme
+COPY . /site
+WORKDIR /site
 
 RUN npm install
 RUN npm run build
@@ -10,10 +10,11 @@ RUN npm run build
 # Serve the site
 FROM klakegg/hugo:0.92.2-ext-alpine
 
-ENV BASE_URL=localhost
+COPY --from=build-css /site /site
 
-COPY . /site
-COPY --from=build-theme /theme /site/themes/kitsune
 WORKDIR /site
 
-ENTRYPOINT hugo serve --baseURL $BASE_URL --port 80 --appendPort=false --minify --gc --disableLiveReload
+ENV PORT=80
+ENV BASE_URL=http://localhost:$PORT
+
+ENTRYPOINT hugo serve --baseURL $BASE_URL --port $PORT --appendPort=false --minify --gc --disableLiveReload
