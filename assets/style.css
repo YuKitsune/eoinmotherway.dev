@@ -2537,6 +2537,14 @@ svg:hover {
 
 .heading-anchor {
   margin-left: 0.25rem;
+  opacity: 0;
+}
+
+.heading-anchor:hover {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
 }
 
 .hamburger {

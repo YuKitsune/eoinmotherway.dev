@@ -83,6 +83,13 @@ svg {
 
 .heading-anchor {
     @apply ml-1;
+    opacity: 0;
+}
+
+.heading-anchor:hover {
+    @apply no-underline;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
 }
 
 .hamburger {
