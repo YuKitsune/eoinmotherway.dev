@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "dev-css": "tailwindcss -c ./tailwind.config.js -i ./assets/input.css -o ./assets/style.css --jit --watch",
+    "dev-css": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./assets/_compiled.css --jit --watch",
     "dev-hugo": "hugo serve",
     "dev": "concurrently \"npm:dev-*\"",
-    "build": "tailwindcss -c ./tailwind.config.js -i ./assets/input.css -o ./assets/style.css --minify"
+    "build": "tailwindcss -c ./tailwind.config.js -i ./assets/style.css -o ./assets/_compiled.css --minify"
   },
   "repository": {
     "type": "git",
