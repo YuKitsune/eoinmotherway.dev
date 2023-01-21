@@ -4,7 +4,7 @@
 
 <h3 align="center">
 
-  [![GitHub Workflow Status](github/actions/workflow/status/yukitsune/yukitsune.dev/docker-image.yml?branch=main)](https://github.com/YuKitsune/yukitsune.dev/actions/workflows/docker-image.yml)
+  [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/yukitsune/yukitsune.dev/docker-image.yml?branch=main)](https://github.com/YuKitsune/yukitsune.dev/actions/workflows/docker-image.yml)
   [![License](https://img.shields.io/github/license/YuKitsune/yukitsune.dev)](https://github.com/YuKitsune/Maestro/blob/main/LICENSE)
   [![Latest Release](https://img.shields.io/github/v/release/YuKitsune/yukitsune.dev?include_prereleases)](https://github.com/YuKitsune/yukitsune.dev/releases)
 
