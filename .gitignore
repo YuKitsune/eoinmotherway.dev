@@ -145,3 +145,4 @@ hugo.linux
 
 # Compiled CSS
 _compiled.css
+.vercel
