@@ -41,8 +41,8 @@ Despite this limitation, the majority of Maestro users share individual tracks r
 
 ### Migrating away from Kubernetes
 
-<!-- Todo: Link to post about K8s -->
-Deploying Maestro into production posed significant challenges. Initially, Maestro was deployed on a Kubernetes cluster as a Helm chart consisting of a separate frontend and backend container. However, maintaining the helm chart proved to be challenging, and updating it was easy to forget, causing various problems. Eventually, the Kubernetes cluster became more of a burden than a benefit, and I decided to migrate most of the services to a Platform-as-a-Service (PaaS). Nevertheless, moving Maestro to a PaaS presented two significant challenges.
+Deploying Maestro into production posed significant challenges. Initially, Maestro was deployed on a Kubernetes cluster as a Helm chart consisting of a separate frontend and backend container. However, maintaining the helm chart proved to be challenging, and updating it was easy to forget, causing various problems. Eventually, the Kubernetes cluster became more of a burden than a benefit, and I decided to migrate most of the services to a Platform-as-a-Service (PaaS). I have a [separate blog post]({{< ref "/posts/k8s-to-paas" >}}) detailing the motivations for moving to a PaaS offering, as well as describing the process.
+Nevertheless, moving Maestro to a PaaS presented two significant challenges.
 
 #### Merging containers
 
