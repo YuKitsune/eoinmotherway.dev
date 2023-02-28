@@ -7,6 +7,8 @@ keywords = ["music", "sharing", "helm", "kubernetes", "k8s", "paas"]
 author = "Eoin Motherway"
 +++
 
+{{< image src="/images/maestro/cover.png" alt="A screenshot of Maestro displaying links for the song Lots of Nothing by Spacey Jane." >}}
+
 ## What is Maestro?
 
 Maestro is a small web application with a simple yet powerful purpose: it lets users share music with each other, regardless of which streaming platform they use. With so many music streaming services available today, it can be frustrating when friends can't easily share and enjoy their favorite tracks together. That's where Maestro comes in. In this blog post, we'll dive into the details of this project, including the problem it solves, how it works, and what I learned while building it.
