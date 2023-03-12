@@ -1,0 +1,30 @@
+{{ define "main" }}
+    
+    <!-- If anything was defined, then display it as an article -->
+    {{ if .Content }}
+        <article class="self-center">
+            {{ .Content }}
+        </article>
+    {{ end }}
+
+    <!-- Todo: Implement pagination -->
+    <!-- Paginated posts -->
+    <!--
+    <div class="flex flex-col gap-12">
+        {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+        {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+
+        {{ $PageContext := . }}
+        {{ if .IsHome }}
+            {{ $PageContext = .Site }}
+        {{ end }}
+        {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
+
+        {{ range $paginator.Pages }}
+            {{ partial "preview.html" . }}
+        {{ end }}
+        {{ partial "pagination.html" . }}
+    </div>
+    -->
+
+{{ end }}

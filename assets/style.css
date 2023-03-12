@@ -6,6 +6,14 @@
     @apply text-transparent bg-gradient-to-r from-violet-600 to-cyan-400 dark:from-violet-400 dark:to-cyan-500 bg-clip-text decoration-violet-600 dark:decoration-violet-400;
 }
 
+.pretty:nth-of-type(odd) {
+    @apply from-violet-600 to-cyan-400 dark:from-violet-400 dark:to-cyan-500;
+}
+
+.pretty:nth-of-type(even) {
+    @apply from-cyan-400 to-violet-600 dark:from-cyan-500 dark:to-violet-400;
+}
+
 .title {
     @apply inline-block font-bold pretty;
 }
@@ -19,6 +27,10 @@ h1:first-child {
     @apply title
 }
 
+.heading {
+    @apply font-bold leading-tight;
+}
+
 /* Don't apply any margin to the first header */
 .heading:first-child {
     @apply mt-0;
@@ -26,6 +38,12 @@ h1:first-child {
 
 body {
     @apply bg-zinc-50 dark:bg-zinc-900 dark:text-white
+}
+
+@media print {
+    body {
+        background-color: #fff;
+    }
 }
 
 h1 {
@@ -68,12 +86,24 @@ hr {
     @apply my-6;
 }
 
+p:first-of-type {
+    @apply mt-0 mb-3;
+}
+
 p {
     @apply my-3;
 }
 
+p:last-child {
+    @apply mt-3 mb-0;
+}
+
 svg {
-    @apply w-6 h-6 fill-violet-600 hover:fill-cyan-400 dark:fill-violet-400 dark:hover:fill-cyan-500;
+    @apply w-6 h-6 fill-violet-600 dark:fill-violet-400;
+}
+
+a > svg {
+    @apply w-6 h-6 hover:fill-cyan-400 dark:hover:fill-cyan-500;
 }
 
 .separator {
@@ -95,4 +125,48 @@ svg {
 .hamburger {
     z-index: 100;
     @apply absolute top-0 bottom-0 left-0 right-0 bg-zinc-50 dark:bg-zinc-900;
+}
+
+.metadata {
+    @apply grid grid-cols-2 gap-2;
+}
+
+.svg-prefix {
+    @apply flex flex-row items-center gap-2
+}
+
+.dot {
+    @apply w-4 h-4 bg-gray-300 rounded-full;
+    content: '&nbsp;'
+}
+
+.filled {
+    @apply bg-violet-600 dark:bg-violet-400;
+}
+
+/* .section {
+    page-break-inside: auto;
+} */
+
+.section > :first-child {
+    @apply border-b;
+}
+
+/* .subsection * {
+    page-break-inside: avoid
+} */
+
+
+.print-only {
+    display : none;
+}
+ 
+@media print {
+    .print-only {
+        display: block;
+    }
+
+    .web-only {
+        display: none;
+    }
 }

@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <div class="flex flex-col gap-1">
+        {{- with .Content -}}
+            <article>
+                <!-- Inject links into the heading tags -->
+                <!-- TODO: Turn the entire heading into a link? -->
+                {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="heading-anchor" aria-hidden="true" role="presentation" tabindex="-1">#</a> ${3}` | safeHTML }}
+            </article>
+        {{- end -}}
+    </div>
+{{ end }}
