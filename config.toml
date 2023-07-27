@@ -1,4 +1,4 @@
-baseURL = 'https://yukitsune.dev/'
+baseURL = 'https://eoinmotherway.dev/'
 languageCode = 'en'
 paginate = 5
 enableGitInfo = true
@@ -13,11 +13,6 @@ enableRobotsTXT = true
     showLastUpdated = true
     readingTime = true
     favicon = 'favicon-128.png'
-
-    [params.twitter]
-        # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-        # do not include @
-        creator = "YuKitsune256"
 
 [languages]
     [languages.en]

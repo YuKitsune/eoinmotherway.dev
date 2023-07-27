@@ -3,7 +3,6 @@ title = "Moving from Kubernetes to PaaS"
 summary = "A Journey to Simplify Deployment, save time, and money."
 date = "2023-02-28"
 author = "Eoin Motherway"
-authorTwitter = "YuKitsune256" #do not include @
 +++
 
 Kubernetes has been a popular choice for running applications due to its flexibility and scalability.
