@@ -5,6 +5,7 @@ date = "2022-03-13"
 cover = "/images/accumap/cover.png"
 keywords = ["accumap", "vatsim", "flight simulation", "map"]
 author = "Eoin Motherway"
+draft = true
 +++
 
 ## What was AccuMap?
