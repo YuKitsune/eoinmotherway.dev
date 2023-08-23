@@ -1,6 +1,6 @@
 +++
 title = "Moving from Kubernetes to PaaS"
-summary = "A Journey to Simplify Deployment, save time, and money."
+summary = "A journey to simplify deployment, save time, and money."
 date = "2023-02-28"
 author = "Eoin Motherway"
 +++
@@ -20,11 +20,11 @@ Additionally, learning Kubernetes was a valuable skill to have, and I wanted to 
 
 ## Using Kubernetes for All the Things
 
-I started my Kubernetes journey with [DigitalOcean's Kubernetes](https://www.digitalocean.com/products/kubernetes) offering to host my blog and a few Discord bots. As my cluster grew, I added more services like [ChartMuseum](https://chartmuseum.com) and [Maestro](/showcase/maestro), and the [Prometheus stack](https://github.com/prometheus-operator/kube-prometheus).
+I started my Kubernetes journey with [DigitalOcean's Kubernetes](https://www.digitalocean.com/products/kubernetes) offering, using it to host my blog and a few Discord bots. As my cluster grew, I added more services like [ChartMuseum](https://chartmuseum.com) and [Maestro](/showcase/maestro), and the [Prometheus stack](https://github.com/prometheus-operator/kube-prometheus).
 
 Using Kubernetes had its advantages and disadvantages. On the positive side, I appreciated how the deployments could be described in YAML, which made them easy to manage and version control in a Git repository. I also found it convenient that I could automate deployments using GitHub Actions.
 
-However, Kubernetes had its share of challenges. When things went wrong, diagnosing issues was often difficult, and troubleshooting required a significant amount of time and effort. Resource exhaustion also eventually became a problem, and adding more nodes to the cluster became prohibitively expensive. 
+However, Kubernetes had its share of challenges. When things went wrong, the sheer complexity of Kubernetes made it difficult to diagnose issues, and required a significant amount of time to troubleshoot for a beginner like myself. Resource exhaustion was often the cause of the issues I came across, however, adding more nodes to the cluster was prohibitively expensive.
 
 In the end, I found that Kubernetes was complete overkill and far too expensive for my needs, which led me to explore other options.
 
@@ -48,11 +48,11 @@ For example, PaaS solutions may have limitations on the types of applications th
 
 Moving to a PaaS from Kubernetes required finding an affordable and suitable option.
 
-Vercel was an obvious choice for hosting the blog since it supports Hugo and has reasonable pricing.
-The process of deploying the blog was effortless, and it was up and running within minutes.
+Vercel was an obvious choice for hosting my blog since it supports Hugo and has reasonable pricing.
+The process of deploying the blog was effortless, and it was up and running within minutes, without any changes to the code. I simply connected my GitHub account, pointed Vercel at the correct repository, and it was running before I could finish brewing a coffee!
 
 Maestro, on the other hand, required a full-stack deployment, which Vercel didn't support.
-I initially explored Azure App Platform, but its complexity made it unsuitable for such a small hobby projects.
+I initially explored Azure App Platform, but its complexity made it unsuitable for such a small hobby project.
 I ended up choosing DigitalOcean App Platform due to its fair pricing and my prior experience with DigitalOcean.
 Although [some changes]({{< ref "/showcase/maestro#migrating-away-from-kubernetes" >}}) were required to the container before deploying Maestro, the app was up and running within seconds once connected to the repository.
 
