@@ -11,7 +11,7 @@
                 src="{{ .RelPermalink }}"
                 width="{{ .Width }}"
                 height="{{ .Height }}"
-                class="m-3 mx-auto object-contain rounded-lg"
+                class="object-contain m-3 mx-auto rounded-lg"
                 {{ with $alt }} alt="{{ . | plainify }}" {{ end }}
                 {{ with $style }} style="{{ . | safeCSS }}" {{ end }}
                 loading="lazy" />
