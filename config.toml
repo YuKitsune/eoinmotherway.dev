@@ -18,8 +18,7 @@ enableRobotsTXT = true
     [languages.en]
         languageName = "English"
         title = "Eoin Motherway"
-        subtitle = "Making computers go beep and boop"
-        copyright = '© 2023 Eoin Motherway'
+        copyright = '© 2024 Eoin Motherway'
 
     [languages.en.params.logo]
         logoText = "Eoin Motherway"
