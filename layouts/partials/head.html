@@ -48,6 +48,3 @@
 {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
-
-<!-- Plausible Analytics -->
-<script defer data-domain="eoinmotherway.dev" src="https://plausible.io/js/plausible.js"></script>
